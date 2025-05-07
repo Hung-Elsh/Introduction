@@ -1,12 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CV Template</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
 </head>
+
 <body>
-    <h1>Introduction</h1>
-    <p>This is the introduction section of the document.</p>
+  <!-- Language Switch Buttons -->
+  <div class="container text-end mt-3">
+    <button class="btn btn-outline-primary me-2" onclick="switchLanguage('en')">English</button>
+    <button class="btn btn-outline-secondary" onclick="switchLanguage('es')">Español</button>
+  </div>
+
+  <div class="container my-5">
+    <div class="row">
+      <!-- Left Column -->
+      <div class="col-md-4 left-column">
+        <!-- Top Left: Owner Image -->
+        <div class="mb-4 text-center">
+          <img src="image/FB_IMG_1732704965239.jpg" alt="Owner Image" class="img-fluid rounded-circle"
+            style="max-width: 200px;">
+        </div>
+
+        <!-- Bottom Left: Skills -->
+        <div>
+          <h2 class="section-title">Skills</h2>
+          <div class="mb-3">
+            <label>HTML & CSS</label>
+            <div class="progress">
+              <div class="progress-bar bg-primary" role="progressbar" style="width: 0%;" data-width="90%">90%</div>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label>JavaScript</label>
+            <div class="progress">
+              <div class="progress-bar bg-success" role="progressbar" style="width: 0%;" data-width="85%">85%</div>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label>React</label>
+            <div class="progress">
+              <div class="progress-bar bg-info" role="progressbar" style="width: 0%;" data-width="80%">80%</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column -->
+      <div class="col-md-8">
+        <!-- Top Right: Name and Title -->
+        <div class="mb-4 text-center">
+          <h1 id="name">Jane Doe</h1>
+          <p class="lead" id="title">Full Stack Developer</p>
+          <p id="contact">Email: jane.doe@example.com | Phone: +123 456 7890 | Website: janedoe.dev</p>
+        </div>
+
+        <!-- Bottom Right: Self Description -->
+        <div>
+          <h2 class="section-title">About Me</h2>
+          <p id="about-text">
+            Passionate developer with 5+ years of experience building responsive web apps using modern technologies.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/lang.js"></script>
+  <script src="js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
