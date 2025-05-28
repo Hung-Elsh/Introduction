@@ -18,14 +18,26 @@
 
   <div class="container my-5">
     <div class="row">
-      <!-- Left Column -->
+      <!-- First Row -->
       <div class="col-md-4 left-column">
         <!-- Top Left: Owner Image -->
         <div class="mb-4 text-center">
           <img src="image/FB_IMG_1732704965239.jpg" alt="Owner Image" class="img-fluid rounded-circle"
             style="max-width: 200px;">
         </div>
-
+      </div>
+      <div class="col-md-8">
+        <!-- Top Right: Name and Title -->
+        <div class="mb-4 text-center">
+          <h1 id="name">Bui Duc Hung</h1>
+          <p id="title" class="lead">Back-end Developer</p>
+          <p id="contact">Email: bui820126@gmail.com | Phone: +84 934 275 164</p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <!-- Left Column -->
+      <div class="col-md-4 left-column">
         <!-- Bottom Left: Program Skills -->
         <div>
           <h2 id="program-skills" class="section-title">Program Skills</h2>
@@ -57,13 +69,13 @@
           <!-- Bottom Left: Language -->
           <h2 id="languages" class="section-title">Languages</h2>
           <div class="mb-3">
-            <label>English</label>
+            <label id="en">English</label>
             <div class="progress">
               <div class="progress-bar bg-success" role="progressbar" style="width: 0%;" data-width="75%">75%</div>
             </div>
           </div>
           <div class="mb-3">
-            <label>Deutsch</label>
+            <label id="de">German</label>
             <div class="progress">
               <div class="progress-bar bg-primary" role="progressbar" style="width: 0%;" data-width="55%">55%</div>
             </div>
@@ -73,34 +85,38 @@
 
       <!-- Right Column -->
       <div class="col-md-8">
-        <!-- Top Right: Name and Title -->
-        <div class="mb-4 text-center">
-          <h1 id="name">Bui Duc Hung</h1>
-          <p id="title" class="lead">Back-end Developer</p>
-          <p id="contact">Email: bui820126@gmail.com | Phone: +84 934 275 164</p>
-        </div>
-
         <!-- Bottom Right: Self Description -->
         <div>
           <h2 id="about-me" class="section-title">About Me</h2>
           <p id="about-text">
-            &emsp;A back-end developer with 2 years of experience specializing in ERP system development. Proficient in Python, JavaScript, and HTML, with a strong understanding of server-side logic, database integration, and web application architecture.
+            A back-end developer with 2 years of experience specializing in ERP system development. Proficient in
+            Python, JavaScript, and HTML, with a strong understanding of server-side logic, database integration, and
+            web application architecture.
           </p>
         </div>
         <!-- Bottom Right: Experience -->
         <div>
           <h2 id="experience" class="section-title">Experience</h2>
           <p id="experience-text">
-            &emsp;2 years of experience in ERP system development at Viidoo, a technology company in Haiphong, Vietnam. Proficient with Odoo framework and PostgreSQL database management.
+            2 years of experience in ERP system development at Viidoo, a technology company in Haiphong, Vietnam.
+            Proficient with Odoo framework and PostgreSQL database management.
           </p>
         </div>
         <!-- Bottom Right: Education -->
         <div>
           <h2 id="education" class="section-title">Education</h2>
           <p id="education-text">
-            &emsp;Bachelor's Degree in Computer Science, Vietnam Maritime University, 2018 - 2022. Specialized in software development and database management. <br>
-            Participated in scientific research on drone control and won 3rd prize at the university level.
+            Bachelor's Degree in Computer Science, Vietnam Maritime University, 2018 - 2024. Specialized in software
+            development and database management. Participated in scientific research on drone control and won 3rd prize
+            at the university level.
           </p>
+          <div id="education-list">
+            <ul>
+              <li>2018 - 2024: Informatic Technology, Vietnam Maritime University</li>
+              <li>2022 - 2024: Back-end Developer, Viidoo Technology Company</li>
+              <li>2024 - 2025: B1 German, Devis</li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
