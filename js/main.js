@@ -5,4 +5,3 @@ window.addEventListener("load", () => {
       bar.style.width = width;
     });
   });
-  
