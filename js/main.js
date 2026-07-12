@@ -1,7 +1,6 @@
-    // Animate progress bars on page load
+// Animate skill bars on page load
 window.addEventListener("load", () => {
-    document.querySelectorAll(".progress-bar").forEach(bar => {
-      const width = bar.getAttribute("data-width");
-      bar.style.width = width;
-    });
+  document.querySelectorAll(".skill-bar span[data-width]").forEach((bar) => {
+    bar.style.width = bar.getAttribute("data-width");
   });
+});

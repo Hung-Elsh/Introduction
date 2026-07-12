@@ -1,0 +1,34 @@
+/* Small overrides for index.html on top of the DevFolio template,
+   for pieces the template doesn't style out of the box. */
+
+/* Social links moved from the footer into the Contact section's
+   info-item grid, styled to match the circular footer buttons. */
+.contact .info-item .social-links {
+  gap: 8px;
+  margin-top: 6px;
+}
+
+.contact .info-item .social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid color-mix(in srgb, var(--accent-color), transparent 40%);
+  font-size: 15px;
+  color: var(--accent-color);
+  transition: 0.3s;
+}
+
+.contact .info-item .social-links a:hover {
+  background: var(--accent-color);
+  color: var(--contrast-color);
+}
+
+/* Footer credit note clarifying content vs. template ownership */
+.footer .site-credit-note {
+  font-size: 12px;
+  margin-top: 4px;
+  color: color-mix(in srgb, var(--default-color), transparent 40%);
+}

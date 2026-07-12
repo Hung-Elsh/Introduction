@@ -1,18 +1,409 @@
+/* CV styling inspired by the DevFolio template's fonts, accent color and
+   "resume" timeline component, adapted for a single-file A4 printable CV. */
+
+:root {
+  --default-font: "Roboto", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+  --heading-font: "Raleway", sans-serif;
+  --nav-font: "Poppins", sans-serif;
+
+  --heading-color: #0a090f;
+  --default-color: #4e4e4e;
+  --accent-color: #0078ff;
+  --surface-color: #ffffff;
+  --sidebar-bg: #f4f7fb;
+  --muted-color: color-mix(in srgb, var(--default-color), transparent 30%);
+
+  --a4-width: 210mm;
+  --a4-height: 297mm;
+  --page-padding-y: 14mm;
+  --page-padding-x: 16mm;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 body {
-    background-color: #f8f9fa;
+  margin: 0;
+  padding: 24px 0;
+  background: #e9ecef;
+  font-family: var(--default-font);
+  color: var(--default-color);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--heading-font);
+  color: var(--heading-color);
+  margin: 0;
+}
+
+/* Print bar (screen only) */
+.print-bar {
+  width: var(--a4-width);
+  margin: 0 auto 16px;
+  text-align: right;
+}
+
+.print-bar button {
+  font-family: var(--nav-font);
+  font-weight: 600;
+  font-size: 14px;
+  color: #fff;
+  background: var(--accent-color);
+  border: none;
+  border-radius: 4px;
+  padding: 10px 22px;
+  cursor: pointer;
+}
+
+.print-bar button:hover {
+  background: color-mix(in srgb, var(--accent-color), black 15%);
+}
+
+/* Page: each .cv-page is a discrete, fixed-size A4 sheet. Stacked with a
+   visible gap on screen so the CV reads as separate pages, not one endless
+   scroll; the same boundaries are used to force page breaks when printing. */
+.cv-page {
+  width: var(--a4-width);
+  height: var(--a4-height);
+  margin: 0 auto 10mm;
+  background: var(--surface-color);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15);
+  padding: var(--page-padding-y) var(--page-padding-x);
+  overflow: hidden;
+}
+
+.cv-page:last-child {
+  margin-bottom: 0;
+}
+
+/* Header */
+.cv-header {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding-bottom: 18px;
+  margin-bottom: 24px;
+  border-bottom: 3px solid var(--accent-color);
+}
+
+.cv-photo {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--accent-color);
+  flex-shrink: 0;
+}
+
+.cv-heading h1 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.cv-role {
+  font-family: var(--nav-font);
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--accent-color);
+  margin: 0 0 10px;
+}
+
+.cv-contact {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 20px;
+  padding: 0;
+  margin: 0;
+  font-size: 13px;
+}
+
+.cv-contact li {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.cv-contact i {
+  color: var(--accent-color);
+}
+
+.cv-contact a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Body layout */
+/* Two-column layout built with floats, not CSS Grid: Chromium doesn't
+   fragment grid rows across print page breaks (the whole row gets shoved
+   to the next page instead of letting each column flow independently),
+   but floated blocks paginate correctly. */
+.cv-body::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.cv-sidebar {
+  float: left;
+  width: 60mm;
+  margin-right: 20px;
+  background: var(--sidebar-bg);
+  border-radius: 6px;
+  padding: 4px 16px 16px;
+}
+
+.cv-body > .cv-main {
+  overflow: hidden;
+}
+
+/* Section titles */
+.cv-section-title {
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding-top: 18px;
+  margin-bottom: 12px;
+  position: relative;
+}
+
+.cv-sidebar .cv-section-title:first-child {
+  padding-top: 16px;
+}
+
+.cv-section-title::after {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 3px;
+  background: var(--accent-color);
+  margin-top: 6px;
+}
+
+.cv-main .cv-section-title {
+  font-size: 19px;
+  padding-top: 22px;
+}
+
+.cv-main .cv-section-title:first-child {
+  padding-top: 0;
+}
+
+.cv-section-title-cont {
+  font-family: var(--nav-font);
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: none;
+  letter-spacing: normal;
+  color: var(--muted-color);
+}
+
+/* Full-width main column used on pages without a sidebar */
+.cv-main--full .resume-item {
+  padding-left: 22px;
+}
+
+.cv-profile {
+  font-size: 13px;
+  margin: 0 0 4px;
+}
+
+/* Skill bars */
+.skill {
+  margin-bottom: 12px;
+}
+
+.skill-label {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--nav-font);
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.skill-bar {
+  height: 6px;
+  border-radius: 3px;
+  background: color-mix(in srgb, var(--default-color), transparent 85%);
+  overflow: hidden;
+}
+
+.skill-bar span {
+  display: block;
+  height: 100%;
+  width: 0;
+  border-radius: 3px;
+  background: var(--accent-color);
+  transition: width 0.9s ease-in-out;
+}
+
+.sidebar-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 12.5px;
+}
+
+.sidebar-list li {
+  padding: 3px 0;
+}
+
+/* Resume timeline items (Experience / Projects / Education) */
+.resume-item {
+  position: relative;
+  padding: 0 0 16px 18px;
+  margin-top: 2px;
+  border-left: 2px solid var(--accent-color);
+}
+
+.resume-item::before {
+  content: "";
+  position: absolute;
+  left: -6px;
+  top: 2px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--surface-color);
+  border: 2px solid var(--accent-color);
+}
+
+.resume-item:last-child {
+  padding-bottom: 0;
+}
+
+.resume-item h3 {
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+
+.resume-item .meta {
+  font-family: var(--nav-font);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--accent-color);
+  margin-bottom: 6px;
+}
+
+.resume-item p {
+  font-size: 12.5px;
+  margin: 0 0 6px;
+}
+
+.resume-item ul {
+  padding-left: 16px;
+  margin: 0 0 6px;
+  font-size: 12.5px;
+}
+
+.resume-item ul ul {
+  margin-top: 4px;
+}
+
+.resume-item li {
+  margin-bottom: 3px;
+}
+
+.resume-item,
+.cv-sidebar section,
+.cv-footer-grid section {
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+/* Footer grid (Certifications / Research & Awards / Interests) used on the
+   last page, once there's no persistent sidebar to hold them */
+.cv-footer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0 20px;
+  margin-top: 20px;
+  padding-top: 4px;
+  border-top: 2px solid var(--accent-color);
+}
+
+.cv-footer-grid .cv-section-title:first-child {
+  padding-top: 16px;
+}
+
+/* Print */
+@page {
+  size: A4;
+  margin: 0;
+}
+
+@media print {
+  body {
+    background: none;
+    padding: 0;
   }
-  
-  .section-title {
-    border-bottom: 2px solid #0d6efd;
-    padding-bottom: 5px;
-    margin-bottom: 20px;
+
+  .print-bar {
+    display: none;
   }
-  
-  .progress-bar {
-    transition: width 1s ease-in-out;
+
+  .cv-page {
+    width: auto;
+    height: auto;
+    min-height: 0;
+    box-shadow: none;
+    margin: 0;
+    padding: var(--page-padding-y) var(--page-padding-x);
+    page-break-after: always;
+    /* Without this, a .cv-page that spans multiple physical pages (its
+       content overflows one sheet) only gets its padding on the first and
+       last fragment -- continuation pages render with zero top padding and
+       text touches the page edge. Clone re-applies it to every fragment. */
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
   }
-  
-  .left-column {
-    background-color: #f0f4f8; /* Light blue-gray */
-    padding: 1.5rem;
+
+  .cv-page:last-child {
+    page-break-after: auto;
   }
+}
+
+/* Small screens: stack layout for on-screen viewing */
+@media (max-width: 860px) {
+  .print-bar,
+  .cv-page {
+    width: 100%;
+  }
+
+  .cv-page {
+    height: auto;
+    overflow: visible;
+    padding: 8vw;
+  }
+
+  .cv-body {
+    grid-template-columns: 1fr;
+  }
+
+  .cv-sidebar {
+    margin-bottom: 8px;
+  }
+
+  .cv-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .cv-contact {
+    justify-content: center;
+  }
+
+  .cv-footer-grid {
+    grid-template-columns: 1fr;
+  }
+}
