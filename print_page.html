@@ -6,15 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Bui Duc Hung - CV</title>
 
-    <!-- Fonts (DevFolio font stack) -->
-    <link href="https://fonts.googleapis.com" rel="preconnect">
-    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Poppins:wght@500;600&family=Raleway:wght@600;700&display=swap"
-          rel="stylesheet">
-
-    <!-- Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -24,241 +15,145 @@
     <button onclick="window.print()">Print / Save as PDF</button>
 </div>
 
-<!-- Page 1: Header + Profile/Skills sidebar + Experience -->
-<div class="cv-page">
-    <header class="cv-header">
-        <img src="image/avarta.png" alt="Bui Duc Hung" class="cv-photo">
-        <div class="cv-heading">
-            <h1>Bui Duc Hung</h1>
-            <p class="cv-role">Back-end Developer | Data Engineer</p>
-            <ul class="cv-contact">
-                <li><i class="bi bi-envelope"></i> <a href="mailto:bui820126@gmail.com">bui820126@gmail.com</a></li>
-                <li><i class="bi bi-telephone"></i> +84 934 275 164</li>
-                <li><i class="bi bi-calendar-event"></i> 08 Sep 1999</li>
-                <li><i class="bi bi-geo-alt"></i> HH2K Xuan Mai Complex, Khu Do Thi Duong Noi Moi, Yen Nghia Ward, Hanoi
-                </li>
-            </ul>
-        </div>
+<div class="cv">
+    <header>
+        <h1 class="cv-title">CURRICULUM VITAE</h1>
+        <p class="cv-subtitle">Target Position: Back-end Developer | Data Engineer</p>
     </header>
 
-    <div class="cv-body">
-        <aside class="cv-sidebar">
+    <section class="cv-section cv-section--keep">
+        <h2 class="cv-section-title">Personal Details</h2>
+        <ul class="details">
+            <li><strong>Full Name:</strong> BUI DUC HUNG</li>
+            <li><strong>Date of Birth:</strong> 08 Sep 1999</li>
+            <li><strong>Phone:</strong> +84 934 275 164</li>
+            <li><strong>Email:</strong> <a href="mailto:bui820126@gmail.com">bui820126@gmail.com</a></li>
+            <li><strong>Address:</strong> HH2K Xuan Mai Complex, Khu Do Thi Duong Noi Moi, Yen Nghia Ward, Hanoi</li>
+            <li><strong>Languages:</strong> English (IELTS), German (B1), Vietnamese (Native)</li>
+        </ul>
+    </section>
 
-            <section>
-                <h2 class="cv-section-title">Profile</h2>
-                <p class="cv-profile">
-                    Back-end developer and data engineer with 4 years of experience across product, enterprise, and
-                    outsourcing environments.
-                    Skilled in back-end services, database design, and CI/CD automation. Currently leading technical
-                    projects, planning, and coordinating team and project resources to deliver reliable, scalable
-                    solutions.
-                </p>
-            </section>
+    <section class="cv-section cv-section--keep">
+        <h2 class="cv-section-title">Professional Summary</h2>
+        <ul class="bullets">
+            <li>Back-end developer and data engineer with 4 years of experience across product, enterprise, and
+                outsourcing environments.
+            </li>
+            <li>Skilled in back-end services, database design, and CI/CD automation, with hands-on work on
+                <strong>PostgreSQL</strong>, <strong>MS SQL Server</strong>, and <strong>Kafka</strong> data pipelines.
+            </li>
+            <li>Built <strong>AI-agent</strong> web applications end-to-end: requirement analysis, data modeling, APIs,
+                deployment, and cloud storage integration.
+            </li>
+            <li>Strong ERP background delivering <strong>Odoo</strong>-based solutions: e-invoicing, warehouse &amp;
+                manufacturing, POS, and CRM.
+            </li>
+            <li>Currently leading technical projects, planning, and coordinating team and project resources to deliver
+                reliable, scalable solutions.
+            </li>
+        </ul>
+    </section>
 
-            <section>
-                <h2 class="cv-section-title">Technical Skills</h2>
-                <div class="skill">
-                    <div class="skill-label"><span>Python</span><span>75%</span></div>
-                    <div class="skill-bar"><span data-width="75%"></span></div>
-                </div>
-                <div class="skill">
-                    <div class="skill-label"><span>SQL</span><span>60%</span></div>
-                    <div class="skill-bar"><span data-width="60%"></span></div>
-                </div>
-                <div class="skill">
-                    <div class="skill-label"><span>JavaScript</span><span>60%</span></div>
-                    <div class="skill-bar"><span data-width="60%"></span></div>
-                </div>
-            </section>
+    <section class="cv-section cv-section--keep">
+        <h2 class="cv-section-title">Technical Skills</h2>
+        <ul class="bullets">
+            <li><strong>Programming Languages:</strong> Python, SQL, JavaScript</li>
+            <li><strong>Back-end Development:</strong> Odoo ERP, RESTful API design, AI-agent web applications,
+                Electron (Windows builds)
+            </li>
+            <li><strong>Databases &amp; Data Engineering:</strong> PostgreSQL (query optimization, indexing), MS SQL
+                Server, data warehouse design, ELT pipelines, Kafka (custom SMT modules), real-time data synchronization
+            </li>
+            <li><strong>Cloud &amp; DevOps:</strong> CI/CD pipelines, deployment, Google Cloud Storage (GCS), AWS
+                (preparing for Data Engineer – Associate)
+            </li>
+            <li><strong>AI / Machine Learning:</strong> AI agents, TensorFlow, OpenCV, NLP (sentiment analysis),
+                computer vision
+            </li>
+        </ul>
+    </section>
 
-            <section>
-                <h2 class="cv-section-title">Languages</h2>
-                <div class="skill">
-                    <div class="skill-label"><span>English</span><span>75%</span></div>
-                    <div class="skill-bar"><span data-width="75%"></span></div>
-                </div>
-                <div class="skill">
-                    <div class="skill-label"><span>German</span><span>35%</span></div>
-                    <div class="skill-bar"><span data-width="35%"></span></div>
-                </div>
-            </section>
-        </aside>
+    <section class="cv-section cv-section--keep">
+        <h2 class="cv-section-title">Soft Skills</h2>
+        <ul class="bullets">
+            <li><strong>Team Collaboration:</strong> Works well with QA/QC and design teams.</li>
+            <li><strong>Agile Methodologies:</strong> Applies the Scrum process and management tools at work.</li>
+            <li><strong>Project Management:</strong> Manages projects end-to-end and coordinates team resources.</li>
+            <li><strong>Self-Learning:</strong> Proactively learns new technologies and languages. Always interested in
+                applying new technology to practical use.
+            </li>
+        </ul>
+    </section>
 
-        <main class="cv-main">
-            <h2 class="cv-section-title">Experience</h2>
+    <section class="cv-section">
+        <h2 class="cv-section-title">Work Experience</h2>
 
-            <div class="resume-item">
-                <h3>Technical Team Leader, Back-end &amp; DevOps Developer</h3>
-                <div class="meta">Vikoisoft &middot; Dec 2025 - Sep 2026</div>
-                <ul>
-                    <li>Project Assistant &amp; Technical Team Leader: AI-agents web apps for architects'
-                        infrastructure-blueprint PM software and inventory distribution software; own back-end &amp;
-                        DevOps &ndash; API design, databases, CI/CD, deployment.
-                    </li>
-                    <li>Manage projects end-to-end and coordinate team resources</li>
-                    <li>Build data pipelines and customized Kafka SMT modules for compatibility with a
-                        Japanese-localized
-                        MS SQL Server.
-                    </li>
-                </ul>
-            </div>
+        <div class="entry">
+            <h3 class="entry-title">1. Vikoisoft</h3>
+            <p class="entry-meta">Position: Technical Team Leader, Back-end &amp; DevOps Developer |
+                <span class="timeline">Timeline: Dec 2025 - Sep 2026</span></p>
+            <p class="entry-desc"><strong>Description:</strong> AI-agent web applications for architects'
+                infrastructure-blueprint project management and for inventory distribution.</p>
+            <ul class="bullets">
+                <li>Project Assistant &amp; Technical Team Leader; own back-end &amp; DevOps &ndash; API design,
+                    databases, CI/CD, deployment.
+                </li>
+                <li>Manage projects end-to-end and coordinate team resources.</li>
+                <li>Build data pipelines and customized Kafka SMT modules for compatibility with a Japanese-localized MS
+                    SQL Server.
+                </li>
+            </ul>
+            <p class="tech-stack"><strong>Tech Stack:</strong> Kafka, MS SQL Server, RESTful APIs, CI/CD, GCS, Electron
+            </p>
+        </div>
 
-            <div class="resume-item">
-                <h3>Technician, CIS-M</h3>
-                <div class="meta">Canon Thang Long Factory &middot; Oct 2025 - Nov 2025</div>
-                <ul>
-                    <li>Maintained and supported the CIS-M division's inventory forecasting software.</li>
-                </ul>
-            </div>
+        <div class="entry">
+            <h3 class="entry-title">2. Canon Thang Long Factory</h3>
+            <p class="entry-meta">Position: Technician, CIS-M | <span
+                    class="timeline">Timeline: Oct 2025 - Nov 2025</span>
+            </p>
+            <ul class="bullets">
+                <li>Maintained and supported the CIS-M division's inventory forecasting software.</li>
+            </ul>
+            <p class="tech-stack"><strong>Tech Stack:</strong> C# </p>
+        </div>
 
-            <div class="resume-item">
-                <h3>Back-end Developer</h3>
-                <div class="meta">Viidoo Technology Company &middot; 2022 - 2024</div>
-                <ul>
-                    <li>Developed and maintained Odoo-based solutions for ERP systems.</li>
-                    <li>Improved database performance by 20% using optimized PostgreSQL queries.</li>
-                    <li>Collaborated with the front-end team to integrate APIs and deliver seamless UX.</li>
-                    <li>Delivered key projects: E-invoice System, Document Management System, Warehouse &amp;
-                        Manufacturing Management System, Point of Sale (POS) with QR-code loyalty program, CRM &amp;
-                        Event Management System.
-                    </li>
-                </ul>
-            </div>
-        </main>
-    </div>
-</div>
+        <div class="entry">
+            <h3 class="entry-title">3. Viidoo Technology Company</h3>
+            <p class="entry-meta">Position: Back-end Developer | <span class="timeline">Timeline: 2022 - 2024</span></p>
+            <p class="entry-desc"><strong>Description:</strong> Development and maintenance of Odoo-based ERP
+                systems.</p>
+            <ul class="bullets">
+                <li>Improved database performance by 20% using optimized PostgreSQL queries.</li>
+                <li>Collaborated with the front-end team to integrate APIs and deliver seamless UX.</li>
+                <li>Delivered key projects: E-invoice System, Document Management System, Warehouse &amp; Manufacturing
+                    Management System, Point of Sale (POS) with QR-code loyalty program, CRM &amp; Event Management
+                    System.
+                </li>
+            </ul>
+            <p class="tech-stack"><strong>Tech Stack:</strong> Odoo, Python, PostgreSQL, APIs, Agile/Scrum</p>
+        </div>
+    </section>
 
-<!-- Page 2: Projects (part 1) -->
-<div class="cv-page">
-    <main class="cv-main cv-main--full">
+    <section class="cv-section">
         <h2 class="cv-section-title">Projects</h2>
 
-        <div class="resume-item">
-            <h3>Control Drone with Hand Gestures</h3>
-            <div class="meta">10/2021 - 05/2022</div>
-            <ul>
-                <li>Developed a system to control drones using hand gestures with Python and OpenCV.</li>
-                <li>Implemented real-time gesture recognition achieving 90% accuracy.</li>
-                <li>Presented the project at the University Scientific Research Competition, winning 3rd Prize.</li>
-            </ul>
+        <div class="entry">
+            <h3 class="entry-title">1. Odoo HR &amp; MRP Implementation Consulting</h3>
+            <p class="entry-meta">Timeline: 05/2026 - 09/2026</p>
+            <p class="entry-desc"><strong>Description:</strong> Technical and business consulting for the development
+                team on an Odoo implementation for a manufacturing company, covering the HR, Manufacturing, and Sales
+                modules.</p>
+            <p class="tech-stack"><strong>Tech Stack:</strong> Odoo (HR, MRP, Sales)</p>
         </div>
 
-        <div class="resume-item">
-            <h3>Natural Language Processing (NLP)</h3>
-            <div class="meta">05/2022 - 07/2022</div>
-            <ul>
-                <li>Developed a sentiment analysis tool using Python and TensorFlow.</li>
-                <li>Achieved 85% accuracy in classifying text sentiments.</li>
-                <li>Deployed the model as a web service as an HR helper module.</li>
-            </ul>
-        </div>
-
-        <div class="resume-item">
-            <h3>E-invoice Integration</h3>
-            <div class="meta">07/2022 - 11/2022</div>
-            <ul>
-                <li>Integrated e-invoice functionality into existing ERP systems.</li>
-                <li>Ensured compliance with local regulations and standards.</li>
-                <li>Improved invoicing efficiency by 30% through automation.</li>
-            </ul>
-        </div>
-
-        <div class="resume-item">
-            <h3>Warehouse and Manufacturing Management System</h3>
-            <div class="meta">02/2023 - 11/2023</div>
-            <ul>
-                <li>Developed a comprehensive warehouse management system.</li>
-                <li>Implemented a standard labor tracking feature to monitor employee productivity.</li>
-                <li>Deployed the subcontracting settlement and settlement report feature.</li>
-            </ul>
-        </div>
-
-        <div class="resume-item">
-            <h3>Document Management and Synchronize System</h3>
-            <div class="meta">10/2022 - 04/2023</div>
-            <ul>
-                <li>Developed a document management system to organize and store company documents.</li>
-                <li>Implemented synchronization features to ensure document consistency across multiple devices.</li>
-                <li>Enhanced document retrieval speed by 70% through optimized indexing.</li>
-            </ul>
-        </div>
-
-        <div class="resume-item">
-            <h3>Point of Sale System (POS)</h3>
-            <div class="meta">04/2023 - 02/2024</div>
-            <ul>
-                <li>Developed a POS system for retail businesses.</li>
-                <li>Integrated payment gateways and inventory management features.</li>
-                <li>Improved transaction speed by 40% through streamlined processes.</li>
-                <li>Improved loyalty features with QR code in POS.</li>
-            </ul>
-        </div>
-    </main>
-</div>
-
-<!-- Page 3: Projects (part 2) -->
-<div class="cv-page">
-    <main class="cv-main cv-main--full">
-        <h2 class="cv-section-title">Projects</h2>
-
-        <div class="resume-item">
-            <h3>Sale-Loyalty Policy Management System</h3>
-            <div class="meta">08/2023 - 02/2024</div>
-            <ul>
-                <li>Developed a loyalty program management system.</li>
-                <li>Implemented features for tracking customer purchases and rewards.</li>
-                <li>Improved the QR code process to enhance customer experience with loyalty programs.</li>
-            </ul>
-        </div>
-
-        <div class="resume-item">
-            <h3>CRM - Event Management System</h3>
-            <div class="meta">01/2024 - 02/2024</div>
-            <ul>
-                <li>Developed a CRM system to manage customer relationships and event planning.</li>
-                <li>Implemented attendance tracking using QR codes and feedback collection.</li>
-            </ul>
-        </div>
-
-        <div class="resume-item">
-            <h3>Cybersecurity Research</h3>
-            <div class="meta">07/2025 - 09/2025</div>
-            <ul>
-                <li>Conducted research on emerging cybersecurity threats and mitigation strategies.</li>
-                <li>Explored the application of AI/ML in enhancing security measures.</li>
-            </ul>
-        </div>
-
-        <div class="resume-item">
-            <h3>Manufacturing Inventory Forcast</h3>
-            <div class="meta">10/2025 - 11/2025</div>
-            <ul>
-                <li>Maintain and improve an internal application for tracking and forecasting raw material inventory.
-                </li>
-            </ul>
-        </div>
-
-        <div class="resume-item">
-            <h3>AI-Agent Inventory Distribution App </h3>
-            <div class="meta">12/2025 - 04/2026</div>
-            <ul>
-                <li>Web app built on native AI-agents for inventory distribution planning.</li>
-                <li>Designed the data warehouse, application database, and ELT pipelines for real-time data
-                    synchronization from the source database.
-                </li>
-                <li>Designed APIs to serve data retrieval and to persist results from the web app to cloud storage
-                    platforms (GCS).
-                </li>
-            </ul>
-        </div>
-
-        <div class="resume-item">
-            <h3>AI-Agent Infrastructure Blueprint PM Tool </h3>
-            <div class="meta">03/2026 - 09/2026</div>
-            <ul>
-                <li>Web app built on native AI-agents, plus a Windows Electron build, for project-management software
-                    that helps architects design and manage the development of infrastructure blueprints.
-                </li>
+        <div class="entry">
+            <h3 class="entry-title">2. AI-Agent Infrastructure Blueprint PM Tool - Vikoisoft</h3>
+            <p class="entry-meta">Timeline: 03/2026 - 09/2026</p>
+            <p class="entry-desc"><strong>Description:</strong> Web app built on native AI-agents, plus a Windows
+                Electron build, for project-management software that helps architects design and manage the
+                development of infrastructure blueprints.</p>
+            <ul class="bullets">
                 <li>Translated client requirements into technical requirements, covering access control, features, and
                     the application's data structure.
                 </li>
@@ -266,99 +161,180 @@
                     between the application system and the AI agent servers.
                 </li>
             </ul>
+            <p class="tech-stack"><strong>Tech Stack:</strong> AI agents, Electron, RESTful APIs, CI/CD</p>
         </div>
 
-        <div class="resume-item">
-            <h3>Odoo HR &amp; MRP Implementation Consulting </h3>
-            <div class="meta">05/2026 - 09/2026</div>
-            <ul>
-                <li>Technical and business consulting for the development team on an Odoo implementation for a
-                    manufacturing company, covering the HR, Manufacturing, and Sales modules.
+        <div class="entry">
+            <h3 class="entry-title">3. AI-Agent Inventory Distribution App - Vikoisoft</h3>
+            <p class="entry-meta">Timeline: 12/2025 - 04/2026</p>
+            <p class="entry-desc"><strong>Description:</strong> Web app built on native AI-agents for inventory
+                distribution planning.</p>
+            <ul class="bullets">
+                <li>Designed the data warehouse, application database, and ELT pipelines for real-time data
+                    synchronization from the source database.
+                </li>
+                <li>Designed APIs to serve data retrieval and to persist results from the web app to cloud storage
+                    platforms (GCS).
+                </li>
+            </ul>
+            <p class="tech-stack"><strong>Tech Stack:</strong> AI agents, data warehouse, ELT pipelines, RESTful APIs,
+                GCS</p>
+        </div>
+
+        <div class="entry">
+            <h3 class="entry-title">4. Manufacturing Inventory Forecast - Canon Thang Long Factory</h3>
+            <p class="entry-meta">Timeline: 10/2025 - 11/2025</p>
+            <ul class="bullets">
+                <li>Maintained and improved an internal application for tracking and forecasting raw material
+                    inventory.
                 </li>
             </ul>
         </div>
-    </main>
-</div>
 
-<!-- Page 4: Education + Certifications / Research & Awards / Interests -->
-<div class="cv-page">
-    <main class="cv-main cv-main--full">
+        <div class="entry">
+            <h3 class="entry-title">5. Cybersecurity Research</h3>
+            <p class="entry-meta">Timeline: 07/2025 - 09/2025</p>
+            <ul class="bullets">
+                <li>Conducted research on emerging cybersecurity threats and mitigation strategies.</li>
+                <li>Explored the application of AI/ML in enhancing security measures.</li>
+            </ul>
+        </div>
+
+        <div class="entry">
+            <h3 class="entry-title">6. CRM - Event Management System - Viidoo</h3>
+            <p class="entry-meta">Timeline: 01/2024 - 02/2024</p>
+            <p class="entry-desc"><strong>Description:</strong> CRM system to manage customer relationships and event
+                planning.</p>
+            <ul class="bullets">
+                <li>Implemented attendance tracking using QR codes and feedback collection.</li>
+            </ul>
+            <p class="tech-stack"><strong>Tech Stack:</strong> Odoo, Python, PostgreSQL</p>
+        </div>
+
+        <div class="entry">
+            <h3 class="entry-title">7. Sale-Loyalty Policy Management System - Viidoo</h3>
+            <p class="entry-meta">Timeline: 08/2023 - 02/2024</p>
+            <p class="entry-desc"><strong>Description:</strong> Loyalty program management system.</p>
+            <ul class="bullets">
+                <li>Implemented features for tracking customer purchases and rewards.</li>
+                <li>Improved the QR code process to enhance customer experience with loyalty programs.</li>
+            </ul>
+            <p class="tech-stack"><strong>Tech Stack:</strong> Odoo, Python, PostgreSQL</p>
+        </div>
+
+        <div class="entry">
+            <h3 class="entry-title">8. Point of Sale System (POS) - Viidoo</h3>
+            <p class="entry-meta">Timeline: 04/2023 - 02/2024</p>
+            <p class="entry-desc"><strong>Description:</strong> POS system for retail businesses.</p>
+            <ul class="bullets">
+                <li>Integrated payment gateways and inventory management features.</li>
+                <li>Improved transaction speed by 40% through streamlined processes.</li>
+                <li>Improved loyalty features with QR code in POS.</li>
+            </ul>
+            <p class="tech-stack"><strong>Tech Stack:</strong> Odoo, Python, PostgreSQL</p>
+        </div>
+
+        <div class="entry">
+            <h3 class="entry-title">9. Warehouse and Manufacturing Management System - Viidoo</h3>
+            <p class="entry-meta">Timeline: 02/2023 - 11/2023</p>
+            <p class="entry-desc"><strong>Description:</strong> Comprehensive warehouse management system.</p>
+            <ul class="bullets">
+                <li>Implemented a standard labor tracking feature to monitor employee productivity.</li>
+                <li>Deployed the subcontracting settlement and settlement report feature.</li>
+            </ul>
+            <p class="tech-stack"><strong>Tech Stack:</strong> Odoo, Python, PostgreSQL</p>
+        </div>
+
+        <div class="entry">
+            <h3 class="entry-title">10. Document Management and Synchronize System - Viidoo</h3>
+            <p class="entry-meta">Timeline: 10/2022 - 04/2023</p>
+            <p class="entry-desc"><strong>Description:</strong> Document management system to organize and store
+                company documents.</p>
+            <ul class="bullets">
+                <li>Implemented synchronization features to ensure document consistency across multiple devices.</li>
+                <li>Enhanced document retrieval speed by 70% through optimized indexing.</li>
+            </ul>
+            <p class="tech-stack"><strong>Tech Stack:</strong> Odoo, Python, PostgreSQL</p>
+        </div>
+
+        <div class="entry">
+            <h3 class="entry-title">11. E-invoice Integration - Viidoo</h3>
+            <p class="entry-meta">Timeline: 07/2022 - 11/2022</p>
+            <p class="entry-desc"><strong>Description:</strong> Integrated e-invoice functionality into existing ERP
+                systems.</p>
+            <ul class="bullets">
+                <li>Ensured compliance with local regulations and standards.</li>
+                <li>Improved invoicing efficiency by 30% through automation.</li>
+            </ul>
+            <p class="tech-stack"><strong>Tech Stack:</strong> Odoo, Python, PostgreSQL</p>
+        </div>
+
+        <div class="entry">
+            <h3 class="entry-title">12. Natural Language Processing (NLP)</h3>
+            <p class="entry-meta">Timeline: 05/2022 - 07/2022</p>
+            <p class="entry-desc"><strong>Description:</strong> Sentiment analysis tool built with Python and
+                TensorFlow.</p>
+            <ul class="bullets">
+                <li>Achieved 85% accuracy in classifying text sentiments.</li>
+                <li>Deployed the model as a web service as an HR helper module.</li>
+            </ul>
+            <p class="tech-stack"><strong>Tech Stack:</strong> Python, TensorFlow</p>
+        </div>
+
+        <div class="entry">
+            <h3 class="entry-title">13. Control Drone with Hand Gestures - Vietnam Maritime University</h3>
+            <p class="entry-meta">Timeline: 10/2021 - 05/2022</p>
+            <p class="entry-desc"><strong>Description:</strong> System to control drones using hand gestures with
+                Python and OpenCV.</p>
+            <ul class="bullets">
+                <li>Implemented real-time gesture recognition achieving 90% accuracy.</li>
+                <li>Presented the project at the University Scientific Research Competition, winning 3rd Prize.</li>
+            </ul>
+            <p class="tech-stack"><strong>Tech Stack:</strong> Python, OpenCV, computer vision</p>
+        </div>
+    </section>
+
+    <section class="cv-section cv-section--keep">
         <h2 class="cv-section-title">Education</h2>
+        <ul class="details">
+            <li><strong>Period:</strong> 2018 - 2024</li>
+            <li><strong>Institution:</strong> Vietnam Maritime University</li>
+            <li><strong>Major:</strong> Information Technology</li>
+            <li><strong>Degree Level:</strong> Engineer</li>
+            <li><strong>GPA:</strong> 3.02/4.0</li>
+            <li><strong>Thesis:</strong> Drone control with hand gestures using computer vision.</li>
+            <li><strong>Relevant Courses:</strong> Data Structures, Algorithms, Database Systems, Network Security.</li>
+        </ul>
+    </section>
 
-        <div class="resume-item">
-            <h3>B.Sc. in Computer Science</h3>
-            <div class="meta">Vietnam Maritime University &middot; 2018 - 2024</div>
-            <ul>
-                <li>Major: Information Technology</li>
-                <li>Degree Level: Engineer</li>
-                <li>GPA: 3.02/4.0</li>
-                <li>Thesis: Drone control with hand gestures using computer vision.</li>
-                <li>Relevant Courses: Data Structures, Algorithms, Database Systems, Network Security.</li>
-            </ul>
-        </div>
+    <section class="cv-section cv-section--keep">
+        <h2 class="cv-section-title">Certifications &amp; Courses</h2>
+        <ul class="bullets">
+            <li>IELTS Certification - British Council (2022)</li>
+            <li>B1 German Certification - Devis Institute (2024-2025)</li>
+            <li>AWS Certified Data Engineer – Associate (Ongoing)</li>
+            <li>Data Engineering - Udemy (2026)</li>
+            <li>AI and Machine Learning - Coursera (2022)</li>
+            <li>Agile Methodologies - Viidoo Technology internal training (2022 - 2024): Agile practices and the Scrum
+                framework, applied in team projects.
+            </li>
+        </ul>
+    </section>
 
-        <div class="resume-item">
-            <h3>Agile Methodologies</h3>
-            <div class="meta">Viidoo Technology &middot; 2022 - 2024</div>
-            <ul>
-                <li>Completed internal training on Agile practices and Scrum framework.</li>
-                <li>Applied Agile principles in team projects to enhance collaboration and productivity.</li>
-            </ul>
-        </div>
+    <section class="cv-section cv-section--keep">
+        <h2 class="cv-section-title">Research &amp; Awards</h2>
+        <ul class="bullets">
+            <li>3rd Prize, University Scientific Research Competition (2022)</li>
+            <li>Research on AI-driven cybersecurity solutions (2025)</li>
+            <li>Ongoing research on robotics and automation (2024-2025)</li>
+        </ul>
+    </section>
 
-        <div class="resume-item">
-            <h3>AI and Machine Learning</h3>
-            <div class="meta">Coursera &middot; 2022</div>
-        </div>
-
-        <div class="resume-item">
-            <h3>Data Engineering</h3>
-            <div class="meta">Udemy &middot; 2026</div>
-        </div>
-    </main>
-
-    <div class="cv-footer-grid">
-        <section>
-            <h2 class="cv-section-title">Soft Skills</h2>
-            <ul class="sidebar-list">
-                <li><strong>Team Collaboration:</strong> Works well with QA/QC and design teams.</li>
-                <li><strong>Agile Methodologies:</strong> Applies the Scrum process and management tools at work.</li>
-                <li><strong>Project Management:</strong> Manages projects end-to-end and coordinates team resources.
-                </li>
-                <li><strong>Self-Learning:</strong> Proactively learns new technologies and languages. Always interested
-                    in applying new technology to practical use.
-                </li>
-            </ul>
-        </section>
-
-        <section>
-            <h2 class="cv-section-title">Certifications</h2>
-            <ul class="sidebar-list">
-                <li>IELTS Certification - British Council (2022)</li>
-                <li>B1 German Certification - Devis Institute (2024-2025)</li>
-                <li>AWS Certified Data Engineer – Associate (Ongoing)</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2 class="cv-section-title">Research &amp; Awards</h2>
-            <ul class="sidebar-list">
-                <li>3rd Prize, University Scientific Research Competition (2022)</li>
-                <li>Research on AI-driven cybersecurity solutions (2025)</li>
-                <li>Ongoing research on robotics and automation (2024-2025)</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2 class="cv-section-title">Interests</h2>
-            <p class="cv-profile">
-                Cybersecurity research, robotics, open-source contributions, hiking, and chess.
-            </p>
-        </section>
-    </div>
+    <section class="cv-section cv-section--keep">
+        <h2 class="cv-section-title">Interests</h2>
+        <p>Cybersecurity research, robotics, open-source contributions, hiking, and chess.</p>
+    </section>
 </div>
-
-<script src="js/main.js"></script>
 </body>
 
 </html>
